@@ -1,0 +1,20 @@
+{
+  "shopName": "The Sharp Blade",
+  "tagline": "Precision cuts. Classic style. Modern experience.",
+  "phone": "+1 (555) 123-4567",
+  "email": "hello@thesharpblade.com",
+  "address": "123 Main Street, New York, NY 10001",
+  "businessHours": [
+    { "day": "Monday",    "open": "09:00", "close": "19:00", "closed": false },
+    { "day": "Tuesday",   "open": "09:00", "close": "19:00", "closed": false },
+    { "day": "Wednesday", "open": "09:00", "close": "19:00", "closed": false },
+    { "day": "Thursday",  "open": "09:00", "close": "20:00", "closed": false },
+    { "day": "Friday",    "open": "09:00", "close": "20:00", "closed": false },
+    { "day": "Saturday",  "open": "08:00", "close": "18:00", "closed": false },
+    { "day": "Sunday",    "open": "00:00", "close": "00:00", "closed": true  }
+  ],
+  "socialLinks": [
+    { "platform": "instagram", "url": "https://instagram.com/thesharpblade" },
+    { "platform": "facebook",  "url": "https://facebook.com/thesharpblade" }
+  ]
+}

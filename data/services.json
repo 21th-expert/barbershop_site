@@ -1,0 +1,50 @@
+[
+  {
+    "id": "haircut",
+    "name": "Classic Haircut",
+    "description": "Precision cut tailored to your face shape and style preference. Includes wash and finish.",
+    "price": 35,
+    "duration": 30,
+    "category": "Hair"
+  },
+  {
+    "id": "beard-trim",
+    "name": "Beard Trim & Shape",
+    "description": "Expert beard sculpting with hot towel and premium oils for a clean, defined look.",
+    "price": 25,
+    "duration": 20,
+    "category": "Beard"
+  },
+  {
+    "id": "haircut-beard",
+    "name": "Haircut + Beard Combo",
+    "description": "Full haircut and beard service combined — our most popular package.",
+    "price": 55,
+    "duration": 50,
+    "category": "Combo"
+  },
+  {
+    "id": "hot-shave",
+    "name": "Hot Towel Shave",
+    "description": "Traditional straight-razor shave with hot towel, pre-shave oil, and aftershave balm.",
+    "price": 40,
+    "duration": 40,
+    "category": "Shave"
+  },
+  {
+    "id": "kids-cut",
+    "name": "Kids Haircut",
+    "description": "Gentle and fun haircut for kids under 12. Patience guaranteed.",
+    "price": 22,
+    "duration": 25,
+    "category": "Hair"
+  },
+  {
+    "id": "fade",
+    "name": "Skin Fade",
+    "description": "High, mid, or low skin fade with seamless blending and crisp lines.",
+    "price": 40,
+    "duration": 35,
+    "category": "Hair"
+  }
+]

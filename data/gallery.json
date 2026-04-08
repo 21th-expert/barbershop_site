@@ -1,0 +1,10 @@
+[
+  { "id": "g1", "src": "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=600&q=80", "alt": "Classic fade haircut", "category": "Fade" },
+  { "id": "g2", "src": "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=600&q=80", "alt": "Beard trim and shape", "category": "Beard" },
+  { "id": "g3", "src": "https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=600&q=80", "alt": "Modern textured cut", "category": "Cut" },
+  { "id": "g4", "src": "https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=600&q=80", "alt": "Hot towel shave", "category": "Shave" },
+  { "id": "g5", "src": "https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=600&q=80", "alt": "Skin fade close-up", "category": "Fade" },
+  { "id": "g6", "src": "https://images.unsplash.com/photo-1634302086687-5e5e5e5e5e5e?w=600&q=80", "alt": "Pompadour style", "category": "Cut" },
+  { "id": "g7", "src": "https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=600&q=80", "alt": "Barbershop interior", "category": "Shop" },
+  { "id": "g8", "src": "https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=600&q=80", "alt": "Straight razor shave", "category": "Shave" }
+]
