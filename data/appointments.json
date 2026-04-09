@@ -1,1 +1,26 @@
-[]
+[
+  {
+    "id": "test001",
+    "serviceId": "haircut",
+    "serviceName": "Classic Haircut",
+    "clientName": "John Doe",
+    "clientEmail": "john@example.com",
+    "clientPhone": "+1 555 000 0000",
+    "date": "2025-04-15",
+    "time": "10:00",
+    "status": "confirmed",
+    "createdAt": "2025-04-08T10:00:00.000Z"
+  },
+  {
+    "id": "mnrcnh3uehb5i9aiffa",
+    "serviceId": "haircut",
+    "serviceName": "Classic Haircut",
+    "clientName": "robert robin",
+    "clientEmail": "robinrobert0113@gmail.com",
+    "clientPhone": "3434323",
+    "date": "2026-04-10",
+    "time": "09:00",
+    "status": "confirmed",
+    "createdAt": "2026-04-09T10:44:01.242Z"
+  }
+]

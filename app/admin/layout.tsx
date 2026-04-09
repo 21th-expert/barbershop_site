@@ -14,13 +14,17 @@ const navItems = [
 export default function AdminLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
   const router = useRouter();
-  const [authed, setAuthed] = useState(false);
+  const [authed, setAuthed] = useState<boolean | null>(null);
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   useEffect(() => {
     const ok = sessionStorage.getItem('admin_authed');
-    if (!ok && pathname !== '/admin') router.replace('/admin');
-    else if (ok) setAuthed(true);
+    if (!ok && pathname !== '/admin') {
+      router.replace('/admin');
+      setAuthed(false);
+    } else {
+      setAuthed(!!ok);
+    }
   }, [pathname, router]);
 
   function logout() {
@@ -28,8 +32,9 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
     router.replace('/admin');
   }
 
-  if (!authed && pathname !== '/admin') return null;
   if (pathname === '/admin') return <>{children}</>;
+  if (authed === null) return <div className="min-h-screen bg-brand-black flex items-center justify-center"><span className="text-brand-light/40 text-sm">Loading…</span></div>;
+  if (!authed) return null;
 
   return (
     <div className="flex min-h-screen bg-brand-black">

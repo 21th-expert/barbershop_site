@@ -43,7 +43,7 @@ export default function BookingPage() {
 
   async function onSubmit(data: BookingForm) {
     setSubmitting(true);
-    await fetch('/api/booking', {
+    const res = await fetch('/api/booking', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -51,9 +51,12 @@ export default function BookingPage() {
         serviceName: selectedService!.name,
         date: selectedDate,
         time: selectedTime,
-        ...data,
+        clientName: data.name,
+        clientEmail: data.email,
+        clientPhone: data.phone,
       }),
     });
+    if (!res.ok) { setSubmitting(false); alert('Booking failed, please try again.'); return; }
     setDone(true);
     setSubmitting(false);
   }
