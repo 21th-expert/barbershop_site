@@ -1,18 +1,92 @@
 [
-  { "id": "g1",  "src": "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=600&q=80", "alt": "Classic fade haircut",          "category": "Fade"  },
-  { "id": "g2",  "src": "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=600&q=80", "alt": "Beard trim and shape",          "category": "Beard" },
-  { "id": "g3",  "src": "https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=600&q=80", "alt": "Modern textured cut",           "category": "Cut"   },
-  { "id": "g4",  "src": "https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=600&q=80", "alt": "Hot towel shave",               "category": "Shave" },
-  { "id": "g5",  "src": "https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=600&q=80", "alt": "Skin fade close-up",            "category": "Fade"  },
-  { "id": "g6",  "src": "https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=600&q=80", "alt": "Barbershop interior",           "category": "Shop"  },
-  { "id": "g7",  "src": "https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=600&q=80", "alt": "Straight razor shave",          "category": "Shave" },
-  { "id": "g8",  "src": "https://images.unsplash.com/photo-1512864084360-7c0c4d0a0845?w=600&q=80", "alt": "Low fade with hard part",       "category": "Fade"  },
-  { "id": "g9",  "src": "https://images.unsplash.com/photo-1593702288056-f9454dc4e0a8?w=600&q=80", "alt": "Full beard grooming",           "category": "Beard" },
-  { "id": "g10", "src": "https://images.unsplash.com/photo-1534297635766-a262cdcb8ee4?w=600&q=80", "alt": "Scissor cut styling",           "category": "Cut"   },
-  { "id": "g11", "src": "https://images.unsplash.com/photo-1567894340315-735d7c361db0?w=600&q=80", "alt": "Barber tools on counter",       "category": "Shop"  },
-  { "id": "g12", "src": "https://images.unsplash.com/photo-1596728325488-58c87691e9af?w=600&q=80", "alt": "Mid fade taper",                "category": "Fade"  },
-  { "id": "g13", "src": "https://images.unsplash.com/photo-1560066984-138dadb4c035?w=600&q=80", "alt": "Beard line-up detail",           "category": "Beard" },
-  { "id": "g14", "src": "https://images.unsplash.com/photo-1622288432450-277d0fef5ed6?w=600&q=80", "alt": "Classic pompadour",             "category": "Cut"   },
-  { "id": "g15", "src": "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=600&q=80", "alt": "Barber chair and mirror",       "category": "Shop"  },
-  { "id": "g16", "src": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&q=80", "alt": "High skin fade finish",         "category": "Fade"  }
+  {
+    "id": "g1",
+    "src": "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=600&q=80",
+    "alt": "Classic fade haircut",
+    "category": "Fade"
+  },
+  {
+    "id": "g2",
+    "src": "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=600&q=80",
+    "alt": "Beard trim and shape",
+    "category": "Beard"
+  },
+  {
+    "id": "g3",
+    "src": "https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=600&q=80",
+    "alt": "Modern textured cut",
+    "category": "Cut"
+  },
+  {
+    "id": "g4",
+    "src": "https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=600&q=80",
+    "alt": "Hot towel shave",
+    "category": "Shave"
+  },
+  {
+    "id": "g5",
+    "src": "https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=600&q=80",
+    "alt": "Skin fade close-up",
+    "category": "Fade"
+  },
+  {
+    "id": "g6",
+    "src": "https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=600&q=80",
+    "alt": "Barbershop interior",
+    "category": "Shop"
+  },
+  {
+    "id": "g7",
+    "src": "https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=600&q=80",
+    "alt": "Straight razor shave",
+    "category": "Shave"
+  },
+  {
+    "id": "g8",
+    "src": "https://images.unsplash.com/photo-1512864084360-7c0c4d0a0845?w=600&q=80",
+    "alt": "Low fade with hard part",
+    "category": "Fade"
+  },
+  {
+    "id": "g10",
+    "src": "https://images.unsplash.com/photo-1534297635766-a262cdcb8ee4?w=600&q=80",
+    "alt": "Scissor cut styling",
+    "category": "Cut"
+  },
+  {
+    "id": "g11",
+    "src": "https://images.unsplash.com/photo-1567894340315-735d7c361db0?w=600&q=80",
+    "alt": "Barber tools on counter",
+    "category": "Shop"
+  },
+  {
+    "id": "g12",
+    "src": "https://images.unsplash.com/photo-1596728325488-58c87691e9af?w=600&q=80",
+    "alt": "Mid fade taper",
+    "category": "Fade"
+  },
+  {
+    "id": "g13",
+    "src": "https://images.unsplash.com/photo-1560066984-138dadb4c035?w=600&q=80",
+    "alt": "Beard line-up detail",
+    "category": "Beard"
+  },
+  {
+    "id": "g14",
+    "src": "https://images.unsplash.com/photo-1622288432450-277d0fef5ed6?w=600&q=80",
+    "alt": "Classic pompadour",
+    "category": "Cut"
+  },
+  {
+    "id": "g15",
+    "src": "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=600&q=80",
+    "alt": "Barber chair and mirror",
+    "category": "Shop"
+  },
+  {
+    "id": "g16",
+    "src": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&q=80",
+    "alt": "High skin fade finish",
+    "category": "Fade"
+  }
 ]

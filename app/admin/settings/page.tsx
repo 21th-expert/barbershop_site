@@ -19,20 +19,19 @@ export default function AdminSettingsPage() {
     setTimeout(() => setSaved(false), 3000);
   }
 
-  const inputCls = 'w-full bg-brand-black border border-brand-gray/60 focus:border-brand-gold outline-none px-3 py-2 text-brand-cream text-sm';
+  const inputCls = 'w-full bg-white border border-slate-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-100 outline-none px-3 py-2 text-slate-800 text-sm rounded-lg transition-all';
   const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 
   return (
     <div className="max-w-2xl">
       <div className="flex items-center justify-between mb-6">
-        <h1 className="text-2xl font-heading font-bold text-brand-cream">Settings</h1>
-        {saved && <span className="flex items-center gap-1 text-green-400 text-sm"><CheckCircle size={14} /> Saved!</span>}
+        <h1 className="text-2xl font-heading font-bold text-slate-800">Settings</h1>
+        {saved && <span className="flex items-center gap-1 text-green-600 text-sm font-medium"><CheckCircle size={14} /> Saved!</span>}
       </div>
 
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-8">
-        {/* General */}
-        <section>
-          <h2 className="text-brand-gold text-sm uppercase tracking-wider font-semibold mb-4">General</h2>
+        <section className="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm">
+          <h2 className="text-blue-600 text-sm uppercase tracking-wider font-semibold mb-4">General</h2>
           <div className="space-y-3">
             <input {...register('shopName')} placeholder="Shop Name" className={inputCls} />
             <input {...register('tagline')} placeholder="Tagline" className={inputCls} />
@@ -42,17 +41,16 @@ export default function AdminSettingsPage() {
           </div>
         </section>
 
-        {/* Business Hours */}
-        <section>
-          <h2 className="text-brand-gold text-sm uppercase tracking-wider font-semibold mb-4">Business Hours</h2>
+        <section className="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm">
+          <h2 className="text-blue-600 text-sm uppercase tracking-wider font-semibold mb-4">Business Hours</h2>
           <div className="space-y-2">
             {days.map((day, i) => (
               <div key={day} className="grid grid-cols-4 gap-2 items-center">
-                <span className="text-brand-light/70 text-sm">{day}</span>
+                <span className="text-slate-600 text-sm font-medium">{day}</span>
                 <input {...register(`businessHours.${i}.open`)} className={inputCls} placeholder="09:00" />
                 <input {...register(`businessHours.${i}.close`)} className={inputCls} placeholder="19:00" />
-                <label className="flex items-center gap-2 text-sm text-brand-light/50">
-                  <input type="checkbox" {...register(`businessHours.${i}.closed`)} className="accent-brand-gold" />
+                <label className="flex items-center gap-2 text-sm text-slate-500">
+                  <input type="checkbox" {...register(`businessHours.${i}.closed`)} className="accent-blue-600" />
                   Closed
                 </label>
               </div>

@@ -14,9 +14,9 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-brand-black/95 backdrop-blur border-b border-brand-gray">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur border-b border-slate-200 shadow-sm">
       <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-2 text-brand-gold font-heading font-bold text-xl">
+        <Link href="/" className="flex items-center gap-2 text-blue-600 font-heading font-bold text-xl">
           <Scissors size={22} />
           {settings.shopName}
         </Link>
@@ -24,7 +24,7 @@ export default function Navbar() {
         {/* Desktop nav */}
         <nav className="hidden md:flex items-center gap-8">
           {links.map((l) => (
-            <Link key={l.href} href={l.href} className="text-brand-light hover:text-brand-gold transition-colors text-sm font-medium tracking-wide uppercase">
+            <Link key={l.href} href={l.href} className="text-slate-600 hover:text-blue-600 transition-colors text-sm font-medium tracking-wide uppercase">
               {l.label}
             </Link>
           ))}
@@ -32,16 +32,16 @@ export default function Navbar() {
         </nav>
 
         {/* Mobile toggle */}
-        <button className="md:hidden text-brand-cream" onClick={() => setOpen(!open)} aria-label="Toggle menu">
+        <button className="md:hidden text-slate-700" onClick={() => setOpen(!open)} aria-label="Toggle menu">
           {open ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
 
       {/* Mobile menu */}
       {open && (
-        <div className="md:hidden bg-brand-gray border-t border-brand-gray px-4 py-4 flex flex-col gap-4">
+        <div className="md:hidden bg-white border-t border-slate-200 px-4 py-4 flex flex-col gap-4 shadow-lg">
           {links.map((l) => (
-            <Link key={l.href} href={l.href} onClick={() => setOpen(false)} className="text-brand-light hover:text-brand-gold transition-colors font-medium uppercase tracking-wide">
+            <Link key={l.href} href={l.href} onClick={() => setOpen(false)} className="text-slate-700 hover:text-blue-600 transition-colors font-medium uppercase tracking-wide">
               {l.label}
             </Link>
           ))}

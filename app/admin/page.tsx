@@ -29,18 +29,18 @@ export default function AdminLoginPage() {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-brand-black px-4">
-      <div className="w-full max-w-sm">
+    <div className="min-h-screen flex items-center justify-center bg-slate-50 px-4">
+      <div className="w-full max-w-sm bg-white rounded-2xl shadow-lg p-8">
         <div className="text-center mb-8">
-          <div className="flex items-center justify-center gap-2 text-brand-gold font-heading font-bold text-2xl mb-1">
+          <div className="flex items-center justify-center gap-2 text-blue-600 font-heading font-bold text-2xl mb-1">
             <Scissors size={24} /> Admin
           </div>
-          <p className="text-brand-light/50 text-sm">Sign in to manage your barbershop</p>
+          <p className="text-slate-400 text-sm">Sign in to manage your barbershop</p>
         </div>
         <form onSubmit={handleLogin} className="space-y-4">
-          <input value={email} onChange={(e) => setEmail(e.target.value)} type="email" placeholder="Email" required className="w-full bg-brand-gray border border-brand-gray/60 focus:border-brand-gold outline-none px-4 py-3 text-brand-cream text-sm" />
-          <input value={password} onChange={(e) => setPassword(e.target.value)} type="password" placeholder="Password" required className="w-full bg-brand-gray border border-brand-gray/60 focus:border-brand-gold outline-none px-4 py-3 text-brand-cream text-sm" />
-          {error && <p className="text-red-400 text-sm">{error}</p>}
+          <input value={email} onChange={(e) => setEmail(e.target.value)} type="email" placeholder="Email" required className="w-full bg-white border border-slate-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-100 outline-none px-4 py-3 text-slate-800 text-sm rounded-lg transition-all" />
+          <input value={password} onChange={(e) => setPassword(e.target.value)} type="password" placeholder="Password" required className="w-full bg-white border border-slate-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-100 outline-none px-4 py-3 text-slate-800 text-sm rounded-lg transition-all" />
+          {error && <p className="text-red-500 text-sm">{error}</p>}
           <button type="submit" disabled={loading} className="btn-primary w-full">{loading ? 'Signing in…' : 'Sign In'}</button>
         </form>
       </div>

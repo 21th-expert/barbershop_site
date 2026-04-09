@@ -67,10 +67,10 @@ export default function BookingPage() {
         <Navbar />
         <main className="min-h-screen flex items-center justify-center px-4 pt-16">
           <div className="text-center max-w-md">
-            <CheckCircle size={64} className="text-brand-gold mx-auto mb-6" />
-            <h1 className="text-3xl font-heading font-bold text-brand-cream mb-3">You're booked!</h1>
-            <p className="text-brand-light/70 mb-2">A confirmation email has been sent to <strong>{getValues('email')}</strong>.</p>
-            <p className="text-brand-light/50 text-sm mb-8">{selectedService?.name} · {selectedDate} at {selectedTime}</p>
+            <CheckCircle size={64} className="text-blue-600 mx-auto mb-6" />
+            <h1 className="text-3xl font-heading font-bold text-slate-800 mb-3">You're booked!</h1>
+            <p className="text-slate-600 mb-2">A confirmation email has been sent to <strong>{getValues('email')}</strong>.</p>
+            <p className="text-slate-400 text-sm mb-8">{selectedService?.name} · {selectedDate} at {selectedTime}</p>
             <Link href="/" className="btn-primary">Back to Home</Link>
           </div>
         </main>
@@ -85,11 +85,11 @@ export default function BookingPage() {
       <main className="min-h-screen pt-24 pb-16 px-4">
         <div className="max-w-2xl mx-auto">
           <div className="text-center mb-10">
-            <div className="flex items-center justify-center gap-2 text-brand-gold mb-2">
+            <div className="flex items-center justify-center gap-2 text-blue-600 mb-2">
               <Scissors size={20} />
               <span className="uppercase tracking-widest text-sm font-medium">Online Booking</span>
             </div>
-            <h1 className="text-3xl font-heading font-bold text-brand-cream">Book an Appointment</h1>
+            <h1 className="text-3xl font-heading font-bold text-slate-800">Book an Appointment</h1>
           </div>
 
           {/* Step indicator */}
@@ -97,14 +97,14 @@ export default function BookingPage() {
             {STEPS.map((s, i) => (
               <div key={s} className="flex items-center gap-2 flex-1">
                 <div className={`w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold border-2 transition-colors ${
-                  i < step ? 'bg-brand-gold border-brand-gold text-brand-black' :
-                  i === step ? 'border-brand-gold text-brand-gold' :
-                  'border-brand-gray text-brand-gray'
+                  i < step ? 'bg-blue-600 border-blue-600 text-white' :
+                  i === step ? 'border-blue-600 text-blue-600' :
+                  'border-slate-300 text-slate-300'
                 }`}>
                   {i < step ? '✓' : i + 1}
                 </div>
-                <span className={`text-xs hidden sm:block ${i === step ? 'text-brand-gold' : 'text-brand-light/40'}`}>{s}</span>
-                {i < STEPS.length - 1 && <div className={`flex-1 h-px mx-2 ${i < step ? 'bg-brand-gold' : 'bg-brand-gray'}`} />}
+                <span className={`text-xs hidden sm:block ${i === step ? 'text-blue-600' : 'text-slate-400'}`}>{s}</span>
+                {i < STEPS.length - 1 && <div className={`flex-1 h-px mx-2 ${i < step ? 'bg-blue-600' : 'bg-slate-200'}`} />}
               </div>
             ))}
           </div>
@@ -116,14 +116,14 @@ export default function BookingPage() {
                 <button
                   key={s.id}
                   onClick={() => { setSelectedService(s); setStep(1); }}
-                  className="text-left border border-brand-gray hover:border-brand-gold p-5 transition-colors group"
+                  className="text-left card p-5 hover:border-blue-300 transition-all group"
                 >
                   <div className="flex justify-between mb-1">
-                    <span className="text-xs text-brand-gold uppercase tracking-wider">{s.category}</span>
-                    <span className="font-heading font-bold text-brand-gold">{formatPrice(s.price)}</span>
+                    <span className="text-xs text-blue-600 uppercase tracking-wider font-semibold bg-blue-50 px-2 py-0.5 rounded-full">{s.category}</span>
+                    <span className="font-heading font-bold text-blue-600">{formatPrice(s.price)}</span>
                   </div>
-                  <p className="font-heading font-semibold text-brand-cream group-hover:text-brand-gold transition-colors">{s.name}</p>
-                  <p className="text-brand-light/50 text-xs mt-1">{s.duration} min</p>
+                  <p className="font-heading font-semibold text-slate-800 group-hover:text-blue-600 transition-colors">{s.name}</p>
+                  <p className="text-slate-400 text-xs mt-1">{s.duration} min</p>
                 </button>
               ))}
             </div>
@@ -132,7 +132,7 @@ export default function BookingPage() {
           {/* Step 1: Date & Time */}
           {step === 1 && (
             <div>
-              <h2 className="text-lg font-heading font-semibold text-brand-cream mb-4">Select a Date</h2>
+              <h2 className="text-lg font-heading font-semibold text-slate-800 mb-4">Select a Date</h2>
               <div className="grid grid-cols-3 sm:grid-cols-7 gap-2 mb-8">
                 {dates.map((d) => {
                   const str = format(d, 'yyyy-MM-dd');
@@ -140,8 +140,8 @@ export default function BookingPage() {
                     <button
                       key={str}
                       onClick={() => { setSelectedDate(str); setSelectedTime(''); fetchSlots(str); }}
-                      className={`p-2 text-center border transition-colors ${
-                        selectedDate === str ? 'bg-brand-gold text-brand-black border-brand-gold' : 'border-brand-gray text-brand-light/70 hover:border-brand-gold'
+                      className={`p-2 text-center border rounded-lg transition-colors ${
+                        selectedDate === str ? 'bg-blue-600 text-white border-blue-600' : 'border-slate-200 text-slate-600 hover:border-blue-400 bg-white'
                       }`}
                     >
                       <div className="text-xs">{format(d, 'EEE')}</div>
@@ -154,23 +154,23 @@ export default function BookingPage() {
 
               {selectedDate && (
                 <>
-                  <h2 className="text-lg font-heading font-semibold text-brand-cream mb-4">Select a Time</h2>
+                  <h2 className="text-lg font-heading font-semibold text-slate-800 mb-4">Select a Time</h2>
                   {loadingSlots ? (
-                    <p className="text-brand-light/50 text-sm">Loading slots…</p>
+                    <p className="text-slate-400 text-sm">Loading slots…</p>
                   ) : (
                     <div className="grid grid-cols-4 sm:grid-cols-6 gap-2">
                       {availableSlots.map((t) => (
                         <button
                           key={t}
                           onClick={() => setSelectedTime(t)}
-                          className={`py-2 text-sm border transition-colors ${
-                            selectedTime === t ? 'bg-brand-gold text-brand-black border-brand-gold' : 'border-brand-gray text-brand-light/70 hover:border-brand-gold'
+                          className={`py-2 text-sm border rounded-lg transition-colors ${
+                            selectedTime === t ? 'bg-blue-600 text-white border-blue-600' : 'border-slate-200 text-slate-600 hover:border-blue-400 bg-white'
                           }`}
                         >
                           {t}
                         </button>
                       ))}
-                      {availableSlots.length === 0 && <p className="col-span-6 text-brand-light/50 text-sm">No slots available for this day.</p>}
+                      {availableSlots.length === 0 && <p className="col-span-6 text-slate-400 text-sm">No slots available for this day.</p>}
                     </div>
                   )}
                 </>
@@ -187,19 +187,19 @@ export default function BookingPage() {
           {step === 2 && (
             <form onSubmit={handleSubmit(() => setStep(3))} className="space-y-5">
               <div>
-                <label className="text-sm text-brand-light/70 mb-1 block">Full Name</label>
-                <input {...register('name', { required: 'Required' })} className="w-full bg-brand-gray border border-brand-gray/60 focus:border-brand-gold outline-none px-4 py-3 text-brand-cream text-sm" placeholder="John Doe" />
-                {errors.name && <p className="text-red-400 text-xs mt-1">{errors.name.message}</p>}
+                <label className="text-sm text-slate-600 mb-1 block font-medium">Full Name</label>
+                <input {...register('name', { required: 'Required' })} className="w-full bg-white border border-slate-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-100 outline-none px-4 py-3 text-slate-800 text-sm rounded-lg transition-all" placeholder="John Doe" />
+                {errors.name && <p className="text-red-500 text-xs mt-1">{errors.name.message}</p>}
               </div>
               <div>
-                <label className="text-sm text-brand-light/70 mb-1 block">Email</label>
-                <input {...register('email', { required: 'Required', pattern: { value: /^\S+@\S+\.\S+$/, message: 'Invalid email' } })} type="email" className="w-full bg-brand-gray border border-brand-gray/60 focus:border-brand-gold outline-none px-4 py-3 text-brand-cream text-sm" placeholder="john@email.com" />
-                {errors.email && <p className="text-red-400 text-xs mt-1">{errors.email.message}</p>}
+                <label className="text-sm text-slate-600 mb-1 block font-medium">Email</label>
+                <input {...register('email', { required: 'Required', pattern: { value: /^\S+@\S+\.\S+$/, message: 'Invalid email' } })} type="email" className="w-full bg-white border border-slate-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-100 outline-none px-4 py-3 text-slate-800 text-sm rounded-lg transition-all" placeholder="john@email.com" />
+                {errors.email && <p className="text-red-500 text-xs mt-1">{errors.email.message}</p>}
               </div>
               <div>
-                <label className="text-sm text-brand-light/70 mb-1 block">Phone</label>
-                <input {...register('phone', { required: 'Required' })} type="tel" className="w-full bg-brand-gray border border-brand-gray/60 focus:border-brand-gold outline-none px-4 py-3 text-brand-cream text-sm" placeholder="+1 (555) 000-0000" />
-                {errors.phone && <p className="text-red-400 text-xs mt-1">{errors.phone.message}</p>}
+                <label className="text-sm text-slate-600 mb-1 block font-medium">Phone</label>
+                <input {...register('phone', { required: 'Required' })} type="tel" className="w-full bg-white border border-slate-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-100 outline-none px-4 py-3 text-slate-800 text-sm rounded-lg transition-all" placeholder="+1 (555) 000-0000" />
+                {errors.phone && <p className="text-red-500 text-xs mt-1">{errors.phone.message}</p>}
               </div>
               <div className="flex gap-3 mt-2">
                 <button type="button" onClick={() => setStep(1)} className="btn-outline gap-2"><ChevronLeft size={16} /> Back</button>
@@ -211,8 +211,8 @@ export default function BookingPage() {
           {/* Step 3: Confirm */}
           {step === 3 && (
             <div>
-              <div className="border border-brand-gray p-6 space-y-4 mb-6">
-                <h2 className="text-lg font-heading font-semibold text-brand-cream mb-4">Booking Summary</h2>
+              <div className="card p-6 space-y-4 mb-6">
+                <h2 className="text-lg font-heading font-semibold text-slate-800 mb-4">Booking Summary</h2>
                 {[
                   ['Service', selectedService?.name],
                   ['Price', formatPrice(selectedService?.price ?? 0)],
@@ -222,9 +222,9 @@ export default function BookingPage() {
                   ['Email', getValues('email')],
                   ['Phone', getValues('phone')],
                 ].map(([label, value]) => (
-                  <div key={label} className="flex justify-between text-sm border-b border-brand-gray/40 pb-2">
-                    <span className="text-brand-light/50">{label}</span>
-                    <span className="text-brand-cream font-medium">{value}</span>
+                  <div key={label} className="flex justify-between text-sm border-b border-slate-100 pb-2">
+                    <span className="text-slate-400">{label}</span>
+                    <span className="text-slate-800 font-medium">{value}</span>
                   </div>
                 ))}
               </div>

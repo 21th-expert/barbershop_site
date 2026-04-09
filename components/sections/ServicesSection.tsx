@@ -6,16 +6,16 @@ import services from '@/data/services.json';
 
 function ServiceCard({ service }: { service: Service }) {
   return (
-    <div className="border border-brand-gray bg-brand-gray/30 p-6 hover:border-brand-gold transition-colors group">
+    <div className="card p-6 group hover:border-blue-300 transition-all">
       <div className="flex justify-between items-start mb-3">
-        <span className="text-xs uppercase tracking-widest text-brand-gold font-medium">{service.category}</span>
-        <span className="text-2xl font-heading font-bold text-brand-gold">{formatPrice(service.price)}</span>
+        <span className="text-xs uppercase tracking-widest text-blue-600 font-semibold bg-blue-50 px-2 py-1 rounded-full">{service.category}</span>
+        <span className="text-2xl font-heading font-bold text-blue-600">{formatPrice(service.price)}</span>
       </div>
-      <h3 className="text-xl font-heading font-semibold text-brand-cream mb-2 group-hover:text-brand-gold transition-colors">
+      <h3 className="text-xl font-heading font-semibold text-slate-800 mb-2 group-hover:text-blue-600 transition-colors">
         {service.name}
       </h3>
-      <p className="text-brand-light/60 text-sm leading-relaxed mb-4">{service.description}</p>
-      <div className="flex items-center gap-1 text-brand-light/40 text-xs">
+      <p className="text-slate-500 text-sm leading-relaxed mb-4">{service.description}</p>
+      <div className="flex items-center gap-1 text-slate-400 text-xs">
         <Clock size={12} /> {service.duration} min
       </div>
     </div>
@@ -26,7 +26,7 @@ export default function ServicesSection() {
   return (
     <section id="services" className="py-24 px-4 max-w-6xl mx-auto">
       <div className="mb-12">
-        <p className="text-brand-gold uppercase tracking-widest text-sm font-medium mb-2">What We Offer</p>
+        <p className="text-blue-600 uppercase tracking-widest text-sm font-semibold mb-2">What We Offer</p>
         <h2 className="section-title">Our Services</h2>
         <span className="gold-line" />
       </div>

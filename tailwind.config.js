@@ -9,11 +9,13 @@ module.exports = {
     extend: {
       colors: {
         brand: {
-          black:  '#0A0A0A',
-          gold:   '#C9A84C',
-          cream:  '#F5F0E8',
-          gray:   '#2A2A2A',
-          light:  '#E8E0D0',
+          black:  '#1A1A2E',
+          gold:   '#2563EB',
+          cream:  '#1A1A2E',
+          gray:   '#F1F5F9',
+          light:  '#64748B',
+          white:  '#FFFFFF',
+          accent: '#2563EB',
         },
       },
       fontFamily: {

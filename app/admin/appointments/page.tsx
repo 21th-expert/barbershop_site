@@ -42,7 +42,7 @@ export default function AdminAppointmentsPage() {
         <h1 className="text-2xl font-heading font-bold text-brand-cream">Appointments</h1>
         <div className="flex gap-2">
           {(['all', 'confirmed', 'pending', 'cancelled'] as const).map((s) => (
-            <button key={s} onClick={() => setFilter(s)} className={`px-3 py-1 text-xs uppercase tracking-wide border transition-colors ${filter === s ? 'bg-brand-gold text-brand-black border-brand-gold' : 'border-brand-gray text-brand-light/50 hover:border-brand-gold'}`}>
+            <button key={s} onClick={() => setFilter(s)} className={`px-3 py-1 text-xs uppercase tracking-wide border rounded-full transition-colors ${filter === s ? 'bg-blue-600 text-white border-blue-600' : 'border-slate-300 text-slate-500 hover:border-blue-400'}`}>
               {s}
             </button>
           ))}
@@ -50,14 +50,14 @@ export default function AdminAppointmentsPage() {
       </div>
 
       {loading ? (
-        <p className="text-brand-light/50">Loading…</p>
+        <p className="text-slate-400">Loading…</p>
       ) : sorted.length === 0 ? (
-        <p className="text-brand-light/50">No appointments found.</p>
+        <p className="text-slate-400">No appointments found.</p>
       ) : (
         <div className="overflow-x-auto">
           <table className="w-full text-sm">
             <thead>
-              <tr className="border-b border-brand-gray text-brand-light/40 text-xs uppercase tracking-wider">
+              <tr className="border-b border-slate-200 text-slate-400 text-xs uppercase tracking-wider">
                 <th className="text-left py-3 pr-4">Client</th>
                 <th className="text-left py-3 pr-4">Service</th>
                 <th className="text-left py-3 pr-4">Date</th>
@@ -68,16 +68,16 @@ export default function AdminAppointmentsPage() {
             </thead>
             <tbody>
               {sorted.map((a) => (
-                <tr key={a.id} className="border-b border-brand-gray/30 hover:bg-brand-gray/20">
+                <tr key={a.id} className="border-b border-slate-100 hover:bg-slate-50">
                   <td className="py-3 pr-4">
-                    <div className="text-brand-cream font-medium">{a.clientName}</div>
-                    <div className="text-brand-light/40 text-xs">{a.clientEmail}</div>
+                    <div className="text-slate-800 font-medium">{a.clientName}</div>
+                    <div className="text-slate-400 text-xs">{a.clientEmail}</div>
                   </td>
-                  <td className="py-3 pr-4 text-brand-light/70">{a.serviceName}</td>
-                  <td className="py-3 pr-4 text-brand-light/70">{a.date}</td>
-                  <td className="py-3 pr-4 text-brand-light/70">{a.time}</td>
+                  <td className="py-3 pr-4 text-slate-600">{a.serviceName}</td>
+                  <td className="py-3 pr-4 text-slate-600">{a.date}</td>
+                  <td className="py-3 pr-4 text-slate-600">{a.time}</td>
                   <td className="py-3 pr-4">
-                    <span className="flex items-center gap-1 capitalize text-brand-light/70">
+                    <span className="flex items-center gap-1 capitalize text-slate-600">
                       {statusIcon[a.status]} {a.status}
                     </span>
                   </td>
